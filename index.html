@@ -5,12 +5,108 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta http-equiv="refresh" content="0;url=HTML/Nastenka.html">
+    <link rel="stylesheet" href="/CSS/pokus.css">
+    <link href="/css/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
     <title>Document</title>
 </head>
 
 <body>
-    <h1>hi</h1>
+    <header>
+        <div class="flex-row height">
+            <div class="left-part">
+                <h1>Nastenka</h1>
+                <hr>
+                <p class="graph-text" id="zamestnanci">ads</p>
+                <p class="graph-text" id="projekty">ads</p>
+            </div>
+            <div class="height">
+                <div class="right flex-row">
+                    <i class="fa fa-line-chart fa-3x"></i>
+                    <p class="text-menu">Statistika</p>
+                    <a href="Statistika.html">
+                        <i class="fa fa-arrow-right odkaz"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="flex-row menu-container">
+            <div class="box ">
+                <div class="box-icon flex-row">
+                    <i class="fa fa-address-card-o fa-3x"></i>
+                    <p class="text-menu">Nástěnka</p>
+                </div>
+                <div class="flex-row margin">
+                    <div class="inf-text">Více inf.</div>
+                    <a href="index.html">
+                        <i class="fa fa-arrow-right odkaz"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="box">
+                <div class="box-icon flex-row">
+                    <i class="fa fa-users fa-3x"></i>
+                    <p class="text-menu">Zaměstnanci</p>
+                </div>
+                <div class="flex-row margin">
+                    <div class="inf-text">Více inf.</div>
+                    <a href="Zamestnanci.html">
+                        <i class="fa fa-arrow-right odkaz"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="box">
+                <div class="box-icon flex-row">
+                    <i class="fa fa-folder-open-o fa-3x"></i>
+                    <p class="text-menu">Projekty</p>
+                </div>
+                <div class="flex-row margin">
+                    <div class="inf-text">Více inf.</div>
+                    <a href="Projekty.html">
+                        <i class="fa fa-arrow-right odkaz"></i>
+                    </a>
+                </div>
+            </div>
+            <div class=" box">
+                <div class="box-icon flex-row">
+                    <i class="fa fa-newspaper-o fa-3x"></i>
+                    <p class="text-menu">Nový záznam</p>
+                </div>
+                <div class="flex-row margin">
+                    <div class="inf-text">Více inf.</div>
+                    <a href="Novy_zaznam.html">
+                        <i class="fa fa-arrow-right odkaz"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="flex-row">
+        <div class="left-side">
+            <table>
+                <thead>
+                    <tr>
+                        <td>Název Projektu</td>
+                        <td>Zaměstnanec</td>
+                        <td>Odpracované minuty</td>
+                        <td>Datum</td>
+                    </tr>
+                </thead>
+                <tbody id="tbody_nas">
+                    <tr></tr>
+                </tbody>
+            </table>
+
+        </div>
+        <div class="right-side" style="text-align: center">
+            <canvas id="ZamChart"></canvas>
+            <p id="graf_zam_number"></p>
+            <canvas id="ProjectChart"></canvas>
+            <p id="graf_project_number"></p>
+        </div>
+    </main>
+    <script src="/JS/libraires/Chart.js" type="text/javascript"></script>
+    <script src="/JS/libraires/moment.js" type="text/javascript"></script>
+    <script src="/JS/nastenka.js" type="text/javascript"></script>
 </body>
 
 </html>

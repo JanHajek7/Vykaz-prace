@@ -4,10 +4,11 @@
 
 <head>
     <title>Vykaz Práce</title>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/CSS/pokus.css" />
-    <link href="/css/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/CSS/pokus.css" rel="stylesheet" type="text/css" />
+    <link href="/CSS/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+
 </head>
 
 <body>
@@ -15,13 +16,13 @@
         <div class="flex-row height">
             <div class="left-part">
                 <h1>Nastenka</h1>
-                <hr />
+                <hr>
             </div>
             <div class="height">
                 <div class="right flex-row">
                     <i class="fa fa-line-chart fa-3x"></i>
                     <p class="text-menu">Statistika</p>
-                    <a href="/HTML/Statistika.html">
+                    <a href="Statistika.html">
                         <i class="fa fa-arrow-right odkaz"></i>
                     </a>
                 </div>
@@ -35,7 +36,7 @@
                 </div>
                 <div class="flex-row margin">
                     <div class="inf-text">Více inf.</div>
-                    <a href="/HTML/Nastenka.html">
+                    <a href="index.html">
                         <i class="fa fa-arrow-right odkaz"></i>
                     </a>
                 </div>
@@ -47,7 +48,7 @@
                 </div>
                 <div class="flex-row margin">
                     <div class="inf-text">Více inf.</div>
-                    <a href="/HTML/Zamestnanci.html">
+                    <a href="Zamestnanci.html">
                         <i class="fa fa-arrow-right odkaz"></i>
                     </a>
                 </div>
@@ -59,7 +60,7 @@
                 </div>
                 <div class="flex-row margin">
                     <div class="inf-text">Více inf.</div>
-                    <a href="/HTML/Projekty.html">
+                    <a href="Projekty.html">
                         <i class="fa fa-arrow-right odkaz"></i>
                     </a>
                 </div>
@@ -71,34 +72,46 @@
                 </div>
                 <div class="flex-row margin">
                     <div class="inf-text">Více inf.</div>
-                    <a href="/HTML/Novy_zaznam.html">
+                    <a href="Novy_zaznam.html">
                         <i class="fa fa-arrow-right odkaz"></i>
                     </a>
                 </div>
             </div>
         </div>
     </header>
-    <main>
-        <div class="left">
+    <main class="flex-row">
+        <div class="left-side">
             <table>
                 <thead>
                     <tr>
                         <td>Název Projektu</td>
-                        <td>Zaměstnanec</td>
-                        <td>Termín Od-Do</td>
-                        <td>Počet odprac. hodin</td>
-                        <td>Částka</td>
+                        <td>Počet odrapcovaných hodiny</td>
+                        <td>Edit</td>
                     </tr>
                 </thead>
-                <tbody id="tbody_stat">
+                <tbody id="projects">
                     <tr></tr>
                 </tbody>
             </table>
+
+        </div>
+        <div class="right-side">
+            <fieldset>
+                <label>Název projektu</label>
+                <input type="text" id="project_name" placeholder="Název projektu..">
+                <br>
+                <label>Počet odrapcovaných minut</label>
+                <br>
+                <input type="number" placeholder="Název projektu.." value="0" readonly>
+                <br>
+                <button id="project_btn">Pridej</button>
+                <button id="workers_" style="display: none;">Pridej</button>
+                <input type="text" id="ProjectIndex" value="-1" hidden>
+            </fieldset>
         </div>
     </main>
 
-    <script src="/JS/libraires/moment.js" type="text/javascript"></script>
-    <script src="/JS/statistika.js" type="text/javascript"></script>
+    <script src="/JS/projekty.js" type="text/javascript"></script>
 </body>
 
 </html>
