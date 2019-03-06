@@ -1,0 +1,9 @@
+$header__lightBlue:#0099ff;
+$header__red:#ff6666;
+
+@mixin flex_center {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}

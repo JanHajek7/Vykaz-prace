@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>Vykaz Práce</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/CSS/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="/CSS/pokus.css">
+</head>
+
+<body>
+    <header>
+        <div class="flex-row height">
+            <div class="left-part">
+                <h1>Nastenka</h1>
+                <hr>
+            </div>
+            <div class="height">
+                <div class="right flex-row">
+                    <i class="fa fa-line-chart fa-3x"></i>
+                    <p class="text-menu">Statistika</p>
+                    <a href="/HTML/Statistika.html">
+                        <i class="fa fa-arrow-right odkaz"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="flex-row menu-container">
+            <div class="box ">
+                <div class="box-icon flex-row">
+                    <i class="fa fa-address-card-o fa-3x"></i>
+                    <p class="text-menu">Nástěnka</p>
+                </div>
+                <div class="flex-row margin">
+                    <div class="inf-text">Více inf.</div>
+                    <a href="/HTML/Nastenka.html">
+                        <i class="fa fa-arrow-right odkaz"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="box">
+                <div class="box-icon flex-row">
+                    <i class="fa fa-users fa-3x"></i>
+                    <p class="text-menu">Zaměstnanci</p>
+                </div>
+                <div class="flex-row margin">
+                    <div class="inf-text">Více inf.</div>
+                    <a href="/HTML/Zamestnanci.html">
+                        <i class="fa fa-arrow-right odkaz"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="box">
+                <div class="box-icon flex-row">
+                    <i class="fa fa-folder-open-o fa-3x"></i>
+                    <p class="text-menu">Projekty</p>
+                </div>
+                <div class="flex-row margin">
+                    <div class="inf-text">Více inf.</div>
+                    <a href="/HTML/Projekty.html">
+                        <i class="fa fa-arrow-right odkaz"></i>
+                    </a>
+                </div>
+            </div>
+            <div class=" box">
+                <div class="box-icon flex-row">
+                    <i class="fa fa-newspaper-o fa-3x"></i>
+                    <p class="text-menu">Nový záznam</p>
+                </div>
+                <div class="flex-row margin">
+                    <div class="inf-text">Více inf.</div>
+                    <a href="/HTML/Novy_zaznam.html">
+                        <i class="fa fa-arrow-right odkaz"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="flex-row">
+        <div class="left-side">
+            <table>
+                <thead>
+                    <tr>
+                        <td>Název Projektu</td>
+                        <td>Zaměstnanec</td>
+                        <td>Poznámka</td>
+                        <td>Začatek práce</td>
+                        <td>Konec práce</td>
+                        <td>minut</td>
+                    </tr>
+                </thead>
+                <tbody id="new_zam">
+                    <tr></tr>
+                </tbody>
+            </table>
+
+        </div>
+
+        <div class="right-side">
+            <fieldset>
+                <label>Název projektu</label>
+                <br>
+                <select id="projekt_vyber"></select>
+                <br>
+                <label>Zaměstnanec</label>
+                <br>
+                <select id="zam_vyber"></select>
+                <br>
+                <label>Popis</label>
+                <br>
+                <input type="text" id="popis">
+                <br>
+                <label>Začatek práce</label>
+                <br>
+                <input type="datetime-local" id="zacatek" onchange="CountTime()">
+                <br>
+                <label>Konec práce</label>
+                <br>
+                <input type="datetime-local" id="konec" onchange="CountTime()">
+                <br>
+                <input type="text" id="rozdil" readonly>
+                <br>
+                <button id="add_newZam">Pridej</button>
+            </fieldset>
+        </div>
+    </main>
+
+
+    <script src="/JS/libraires/moment.js" type="text/javascript"></script>
+    <script src="/JS/novyZaznam.js" type="text/javascript"></script>
+</body>
+
+</html>

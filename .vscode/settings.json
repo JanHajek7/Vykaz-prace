@@ -1,0 +1,13 @@
+{
+    "color-highlight.enable": true,
+    "liveSassCompile.settings.formats": [{
+        "format": "expanded",
+        "extensionName": ".css",
+        "savePath": "/CSS/"
+    }],
+    "liveSassCompile.settings.generateMap": true,
+    "liveSassCompile.settings.excludeList": [
+        "SCSS/variables.scss",
+        "CSS/font-awesome-4.7.0",
+    ],
+}
