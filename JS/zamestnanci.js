@@ -1,4 +1,4 @@
-"use scrict";
+"use strict";
 
 //ZAMESTNANCI
 let INP_name_zam = document.getElementById("name_zam");

@@ -1,4 +1,4 @@
-"use scrict";
+"use strict";
 
 let tbody_nas = document.getElementById("tbody_nas");
 let zamestnanci_pole = window.localStorage.getItem("Zamestnanci");

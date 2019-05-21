@@ -1,4 +1,4 @@
-"use scrict";
+"use strict";
 
 let tbody_stat = document.getElementById("tbody_stat");
 

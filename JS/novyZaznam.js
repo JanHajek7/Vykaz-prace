@@ -1,4 +1,4 @@
-"use scrict";
+"use strict";
 
 
 let Select_Zam = document.getElementById("zam_vyber");
@@ -28,7 +28,7 @@ else
     Zamestnanci = JSON.parse(zamestnanci_pole);
     Select_add_Zam ();
 }
-console.log(Zamestnanci);
+//console.log(Zamestnanci);
 
 let projekty_pole = window.localStorage.getItem("Projekty");
 let Projekty;
@@ -42,7 +42,7 @@ else
     Projekty = JSON.parse(projekty_pole);
     Select_add_Project();
 }
-console.log(Projekty);
+//console.log(Projekty);
 
 
 let Zaznam_pole = window.localStorage.getItem("Zaznam");
@@ -102,8 +102,11 @@ add_newZam.addEventListener("click", function ()
     console.log(start.value);
     if (start.value && End.value && INP_popis.value !== "" ) {
         let minuty = date_minuty;
+        console.log(Projekty);
         for(let i in Projekty) {
             let nameproject = Projekty[Select_Procject.childNodes[Select_Procject.selectedIndex].dataset.id].name_project;
+            console.log(Projekty[Select_Procject.childNodes[Select_Procject.selectedIndex].dataset.id].name_project);
+        
             let p = Projekty[i];
             
                 console.log(p.min);
