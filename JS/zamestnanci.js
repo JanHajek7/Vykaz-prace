@@ -113,12 +113,12 @@ RenderZam();
 
 function save()
 {
-    Save_Zam = JSON.stringify(Zamestnanci);
+    let Save_Zam = JSON.stringify(Zamestnanci);
     localStorage.setItem("Zamestnanci", Save_Zam);
 }
 function get()
 {
-    Get_Zam = localStorage.getItem("Zamestnanci");
+    let Get_Zam = localStorage.getItem("Zamestnanci");
     return JSON.parse(Get_Zam);
 }
 

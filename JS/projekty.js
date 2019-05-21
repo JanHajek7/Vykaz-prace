@@ -1,4 +1,4 @@
-"use scrict";
+"use strict";
 let INP_project_name = document.getElementById("project_name");
 let INP_hidden = document.getElementById("ProjectIndex");
 
@@ -131,12 +131,12 @@ btn_project.addEventListener("click", function()
 
 function save()
 {
-    Projects_save = JSON.stringify(Projects);
+    let Projects_save = JSON.stringify(Projects);
     localStorage.setItem("Projekty", Projects_save);
 }
 function get()
 {
-    ProjectsJSON_get = localStorage.getItem("Projekty");
+    let ProjectsJSON_get = localStorage.getItem("Projekty");
     return JSON.parse(ProjectsJSON_get);
 }
 

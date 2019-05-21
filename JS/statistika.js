@@ -26,7 +26,7 @@ let Stat_array = Zaznams.slice();
 
 function save()
 {
-    Save_Stat = JSON.stringify(Stat_array);
+    let Save_Stat = JSON.stringify(Stat_array);
     localStorage.setItem("Stat_array", Save_Stat);
 }
 save();
